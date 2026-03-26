@@ -92,7 +92,7 @@ public class MemberController {
 	
 	@RequestMapping("/delete")
 	public String delete(HttpSession session, Model model){
-		String id = (String)session.getAttribute("loginId");
+		String id = (String)session.getAttribute("loginID");
 		dao.delete(id);
 		session.invalidate();
 		return "redirect:/";

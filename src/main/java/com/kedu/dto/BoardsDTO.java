@@ -66,11 +66,14 @@ public class BoardsDTO {
 		this.view_count = view_count;
 	}
 
+
+
 	public Timestamp getwrite_date() {
 		return write_date;
 	}
 
 	public void setwrite_date(Timestamp write_date) {
+
 		this.write_date = write_date;
 	};
 	public Timestamp getWrite_date() {

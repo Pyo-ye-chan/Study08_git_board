@@ -25,12 +25,12 @@ public class MemberDAO {
 	
 
 	public MemberDTO select(String id){
-		String sql = "select * from members where id = ?";
+		String sql = "select * from member where id = ?";
 		return jdbc.queryForObject(sql, new BeanPropertyRowMapper<MemberDTO>(MemberDTO.class), id);
 	}
 	
 	public int update(MemberDTO dto){
-		String sql = "update members set phone = ?, email = ?, zipcode = ?, address1 = ?, address2 = ? where id = ?";
+		String sql = "update member set phone = ?, email = ?, zipcode = ?, address1 = ?, address2 = ? where id = ?";
 		return jdbc.update(sql, dto.getPhone(), dto.getEmail(), dto.getZipcode(), 
 				dto.getAddress1(), dto.getAddress2(), dto.getId() );
 	}
@@ -46,7 +46,7 @@ public class MemberDAO {
 
 
 	public int delete(String id){
-		String sql = "delete from members where id = ?";
+		String sql = "delete from member where id = ?";
 		return jdbc.update(sql, id);
 	}
 	

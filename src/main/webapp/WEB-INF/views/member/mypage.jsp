@@ -220,8 +220,8 @@ a {
                 <input type="submit" id="completeBtn" value="수정완료" style="display: none;">
            		</div>
             	<div class="btns">
-                <a href="/members/back"><input type="button" id="backBtn" value="뒤로가기"></a>
-                <a href="/members/mypage"><input type="button" id="cancelBtn" value="취소" style="display: none;"></a>
+                <a href="/member/back"><input type="button" id="backBtn" value="뒤로가기"></a>
+                <a href="/member/mypage"><input type="button" id="cancelBtn" value="취소" style="display: none;"></a>
            		 </div>
 			</div>
 		</div>

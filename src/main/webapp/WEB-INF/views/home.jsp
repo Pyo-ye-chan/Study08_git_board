@@ -143,7 +143,7 @@
 					   </div>
 				   </td>
 				   <td>
-				   		<a href="/member/delete"><input style="background-color:" type="button" value="회원탈퇴" id="delBtn"></a>
+				   		<a href="/member/toDelete"></a><input style="background-color:" type="button" value="회원탈퇴" id="delBtn"></a>
 				   </td>
 			   </tr>
 		  	</th>

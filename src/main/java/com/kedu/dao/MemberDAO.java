@@ -22,6 +22,7 @@ public class MemberDAO {
 		}
 	}
 	
+
 	public MemberDTO select(String id){
 		String sql = "select * from members where id = ?";
 		return jdbc.queryForObject(sql, new BeanPropertyRowMapper<MemberDTO>(MemberDTO.class), id);
@@ -32,5 +33,16 @@ public class MemberDAO {
 		return jdbc.update(sql, dto.getPhone(), dto.getEmail(), dto.getZipcode(), 
 				dto.getAddress1(), dto.getAddress2(), dto.getId() );
 	}
+
+public int addMember(MemberDTO dto) throws Exception {
+		
+		String sql = "insert into member values (?, ?, ?, ?, ?, ?, ?, ?, sysdate)";
+		
+		return jdbc.update(sql,dto.getId(), dto.getPw(), dto.getName(), dto.getPhone(),
+				dto.getEmail(), dto.getZipcode(), dto.getAddress1(), dto.getAddress2());
+		
+	}
+	
+
 	
 }

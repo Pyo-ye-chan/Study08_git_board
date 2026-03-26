@@ -14,6 +14,16 @@ public class ReplysDAO {
 	
 	public void insert(ReplysDTO dto) {
 		String sql = "insert into replys values(replys_seq.nextval,?,?,sysdate,?)";
+		jdbc.update(sql,dto.getWriter(),dto.getContents(),dto.getParent_seq());
+	}
+	
+	public void update(ReplysDTO dto) {
+		String sql = "update replys set contents = ? where seq = ?";
+		jdbc.update(sql,dto.getContents(),dto.getSeq());
+	}
+	public void delete(int seq) {
+		String sql = "delete from replys wehre seq = ?";
+		jdbc.update(sql,seq);
 	}
 
 }

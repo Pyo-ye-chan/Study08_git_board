@@ -18,7 +18,20 @@ public class ReplysController {
 	public String insert(ReplysDTO dto)  {
 		
 		dao.insert(dto);
+		return "redirect:/boards/detail";
 		
+	}
+	@RequestMapping("/update")
+	public String update(ReplysDTO dto) {
+		dao.update(dto);
+		
+		return "redirect:/boards/detail";
+	}
+	@RequestMapping("/delete")
+	public String delete(int seq) {
+		dao.delete(seq);
+		
+		return "redirect:/boards/detail";
 	}
 
 }

@@ -146,7 +146,7 @@ div{
       		<c:forEach var="i" items="${list }">
             <div class="insert">    
       		<div class="contents">${i.seq }</div>
-            <div class="contents"><a href="/board/detail?seq=${i.seq }&view_count=${i.view_count}" id="link">${i.title }</a></div>
+            <div class="contents">${i.title }</div>
             <div class="contents">${i.writer }</div>
             <div class="contents">${i.write_date }</div>
             <div class="contents">${i.view_count }</div>
@@ -157,59 +157,9 @@ div{
         <a href="/members/back"><button class="btns" id="listBtn">메인</button></a>
         <a href="/board/writeform"><button class="btns" id="writeBtn">글쓰기</button></a>
         </div>
-        <div class="number">
-        
-        </div>
+     
     </div>
 </div>
-<script>
-	let recordCountPerPage = ${recordCountPerPage};
-	let naviCountPerPage = ${naviCountPerPage};
-	let recordTotalCount = ${recordTotalCount};
-	let currentPage = ${currentPage};
-	
-	// js에서는 정수와 실수를 구분하지 않음
-	// let pageTotalCount = (int)Math.ceil((double)${recordTotalCount} / ${recordCountPerPage};
-	let pageTotalCount = Math.ceil(recordTotalCount / recordCountPerPage);
-			
-	let startNavi = Math.floor((currentPage - 1) / naviCountPerPage) * naviCountPerPage + 1;
-	let endNavi = startNavi + naviCountPerPage - 1;
-	
-	if(endNavi > pageTotalCount) {
-		endNavi = pageTotalCount;
-	}
-	
-	let needPrev = true;
-	let needNext = true;
-	
-	if(startNavi == 1){needPrev = false;}
-	if(endNavi == pageTotalCount){needNext = false;}
-	
-	if(needPrev){
-		let prev = $("<a>");
-		prev.attr("href", "/board/list?cpage="+(startNavi-1));
-		prev.html("<<")
-		$(".number").append(prev);
-	}
 
-	
-	for(let i = startNavi; i <= endNavi; i++){
-		let navi = $("<a>");
-		navi.attr("href", "/board/list?cpage="+i);
-		navi.html(" " + i);
-		$(".number").append(navi);
-	}
-	
-	if(needNext){
-		let next =$("<a>");
-		next.attr("href", "/board/list?cpage="+(endNavi+1));
-		next.html(" >>");
-		$(".number").append(next);
-	}
-	
-	console.log("현재 페이지 : " + currentPage);
-	console.log("시작 Navi : " + startNavi);
-	console.log("끝 Navi : " + endNavi);
-</script>
 </body>
 </html>

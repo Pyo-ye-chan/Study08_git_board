@@ -121,7 +121,7 @@
 		       </div>
 		       <div id="btn">
 		            <input id=login type="submit" value="로그인">
-		            <a href="/members/join"><input id=register type="button" value="회원가입"></a>
+		            <a href="/member/join"><input id=register type="button" value="회원가입"></a>
 		       </div>
 	        </form>
 			</div>

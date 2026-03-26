@@ -24,10 +24,16 @@ public class MemberController {
 	@RequestMapping("/login")
 	public String login(String id, String pw,HttpSession session) {
 		boolean result = dao.login(id,eu.getSha512(pw));
+		System.out.println(pw);
 		if(result) {
 			session.setAttribute("loginId", id);
 		}
 		return "redirect:/";	
+	}
+	
+	@RequestMapping("/join")
+	public String join() {
+		return "member/joinform";
 	}
 
 	@RequestMapping("/signup")

@@ -155,7 +155,7 @@ div{
         </div>
         <div class="btn">
         <button class="btns" id="listBtn">메인</button>
-        <button class="btns" id="writeBtn">글쓰기</button>
+        <button class="btns" id="writeBtn" onclick="location.href='/boards/inputGuestbook'">글쓰기</button>
         </div>
      
     </div>

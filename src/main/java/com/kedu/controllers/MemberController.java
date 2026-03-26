@@ -25,8 +25,9 @@ public class MemberController {
 	public String login(String id, String pw,HttpSession session) {
 		boolean result = dao.login(id,eu.getSha512(pw));
 		if(result) {
-			session.setAttribute("loginId", id);
+			session.setAttribute("loginID", id);
 		}
+		System.out.println(result);
 		return "redirect:/";	
 	}
 

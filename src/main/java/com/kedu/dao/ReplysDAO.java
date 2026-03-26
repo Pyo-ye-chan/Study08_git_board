@@ -9,5 +9,7 @@ public class ReplysDAO {
 	
 	@Autowired
 	private JdbcTemplate jdbc;
+	
+	
 
 }

@@ -11,7 +11,7 @@ import com.kedu.dao.BoardsDAO;
 import com.kedu.dto.BoardsDTO;
 
 @Controller
-@RequestMapping("/boards")
+@RequestMapping("/board")
 public class BoardsController {
 	
 	@Autowired

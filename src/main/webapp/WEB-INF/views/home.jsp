@@ -114,7 +114,7 @@
 	   <c:when test="${loginID==null}">
 	   		<div id="main">
 	        <div id="title">Login Box</div>
-	        <form action="/members/login" method="post">
+	        <form action="/member/login" method="post">
 		       <div id="input">
 		            <div id="id">ID <input name="id" type="text" placeholder="ID"></div>
 		            <div id="pw">PW <input name="pw" type="password" placeholder="PW"></div>

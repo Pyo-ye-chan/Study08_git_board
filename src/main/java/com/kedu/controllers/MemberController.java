@@ -12,7 +12,7 @@ import com.kedu.dao.MemberDAO;
 @Controller
 @RequestMapping("/member")
 public class MemberController {
-	
+
 	@Autowired
 	private MemberDAO dao;
 	
@@ -31,4 +31,5 @@ public class MemberController {
 		session.invalidate();
 		return "redirect:/";
 	}
+
 }

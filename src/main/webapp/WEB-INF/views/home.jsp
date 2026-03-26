@@ -135,7 +135,7 @@
 				   	    <a href="/boards/list"><input id="toBoardBtn" name="guestBook" type="button" value="게시판"></a>
 				   </td>
 				   	   <td>
-					   	    <a href="/member/myPage"><input id="toMyPage" name="myPage" type="button" value="마이페이지"></a>
+					   	    <a href="/member/mypage"><input id="toMyPage" name="myPage" type="button" value="마이페이지"></a>
 					   </td>
 				   <td>
 					   <div id="logoutBtn"> 

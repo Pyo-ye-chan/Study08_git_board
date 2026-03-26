@@ -14,6 +14,7 @@ public class MemberDAO {
 	
 	public boolean login(String id, String pw) {
 		String sql = "select count(*) from member where id = ? and pw = ?";
+		System.out.println(pw);
 		int result = jdbc.queryForObject(sql,Integer.class,id,pw);
 		if(result > 0) {
 			return true;

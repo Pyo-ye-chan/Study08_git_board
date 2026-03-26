@@ -23,7 +23,7 @@ public class BoardsDAO {
 	}
 
 	public BoardsDTO selectByseq(int seq) {
-		String sql = "select * from board where seq=?";
+		String sql = "select * from boards where seq=?";
 		return jdbc.queryForObject(sql, new BeanPropertyRowMapper<BoardsDTO>(BoardsDTO.class),seq);
 	}
 

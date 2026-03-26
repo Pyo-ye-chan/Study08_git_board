@@ -33,7 +33,7 @@ public class BoardsController {
 		BoardsDTO dto = dao.selectByseq(seq);
 		model.addAttribute("dto",dto);
 
-		return "/boards/datail";
+		return "/boards/detail";
 	}
 
 	@RequestMapping("/inputGuestbook")

@@ -103,7 +103,6 @@ div{
 }
 
 
-
 .number{
     margin-top: 24px;
     text-align: center;
@@ -143,10 +142,10 @@ div{
             <div class="headline">조회수</div>
         </div>
         <div class="list">
-      		<c:forEach var="i" items="${list }">
+      		<c:forEach var="i" items="${list}">
             <div class="insert">    
       		<div class="contents">${i.seq }</div>
-            <div class="contents">${i.title }</div>
+            <div class="contents"><a href="/boards/detailContent?seq=${i.seq}">${i.title}</a></div>
             <div class="contents">${i.writer }</div>
             <div class="contents">${i.write_date }</div>
             <div class="contents">${i.view_count }</div>

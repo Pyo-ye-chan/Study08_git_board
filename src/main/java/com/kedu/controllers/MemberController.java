@@ -29,7 +29,6 @@ public class MemberController {
 		if(result) {
 			session.setAttribute("loginID", id);
 		}
-		System.out.println(result);
 		return "redirect:/";	
 	}
 	
@@ -67,7 +66,6 @@ public class MemberController {
 		return "redirect:/";
 	}
 
-	
 	@RequestMapping("/mypage")
 	public String toMypage(HttpSession session, Model model) throws Exception{
 		String id = (String)session.getAttribute("loginID");

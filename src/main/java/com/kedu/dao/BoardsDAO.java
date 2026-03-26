@@ -21,7 +21,12 @@ public class BoardsDAO {
 		String sql = "select * from boards order by seq desc";
 		return jdbc.query(sql, new BeanPropertyRowMapper<BoardsDTO>(BoardsDTO.class));		
 	}
-	
+
+	public BoardsDTO selectByseq(int seq) {
+		String sql = "select * from boards where seq=?";
+		return jdbc.queryForObject(sql, new BeanPropertyRowMapper<BoardsDTO>(BoardsDTO.class),seq);
+	}
+
 	public int addlist(BoardsDTO dto) {
 		String sql = "insert into boards " +
                 "VALUES (boards_seq.nextval, ?, ?, ?,?, SYSDATE)";
@@ -30,6 +35,5 @@ public class BoardsDAO {
 		return jdbc.update(sql,dto.getWriter(),dto.getTitle() , dto.getContents(), 0);
 
 	}
-	
-	
+
 }
